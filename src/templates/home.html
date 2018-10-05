@@ -1,39 +1,79 @@
 {% extends 'base.html' %}
 {% load static %}
-
-<title>Home page template</title>
 {% block content %}
-  <div class="text-center">
+<body id="home-bg">
+
+<div class="container">
+  <div class="row">
+    <div class="col-lg-12">
+      <div id="content">
+        <h1>Web Doctor</h1>
+        <h3>The best Disease Prediction Website</h3>
+        <hr>
+        <button class="btn btn-default">
+          <a class="btn-link" href="{% url 'search:query' %}">Get examined!</a>
+          <img class="img-fluid" src="{% static "img/right-arrow.png" %}" alt="">
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
+
+</body>
+
+<!--
+<section>
+  <div class="container">
+    <div class="how-works">
+      <h2>How it works</h2>
+      <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium
+       doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo
+       inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.
+       Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit,
+       sed quia consequuntur magni dolores eos qui ratione voluptatem sequi
+       nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet,
+     consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt.</p>
+     <p>
+       Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium
+       doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo
+       inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.
+       Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit,
+       sed quia consequuntur magni dolores eos qui ratione voluptatem sequi
+       nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet,
+     consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt.</p>
+
+     <button class="btn btn-default">
+      <a class="btn-link" href="{% url 'symptoms:list' %}">More</a>
+      <img class="img-fluid" src="{% static "img/right-arrow.png" %}" alt="">
+    </button>
+  </div>
+</div>
+</section>
+
+<section>
+  <div class="sdr" style="background-image: url({% static "img/molecules-bg.jpg" %});">
     <div class="container">
-      <div class="row">
-        <div class="col-lg-12">
-          <div id="content">
-            <h1>Web Doctor</h1>
-            <h3>The best Disease Prediction Website</h3>
-            <hr>
-            <button class="btn btn-default">
-              <a class="btn-link" href="{% url 'symptoms:list' %}">Symptoms</a>
-            </button>
+      <div class="row no-gutters">
+        <div class="holder col-md-4">
+          <div class="diseases">
+            <img src="{% static "img/germs.png" %}" alt="">
+            <h3>Diseases</h3>
+          </div>
+        </div>
+        <div class="holder col-md-4">
+          <div class="symptoms">
+            <img src="{% static "img/medical-history.png" %}" alt="">
+            <h3>Symptoms</h3>
+          </div>
+        </div>
+        <div class="holder col-md-4">
+          <div class="recommendation">
+            <img src="{% static "img/medication.png" %}" alt="">
+            <h3>Recommendation</h3>
           </div>
         </div>
       </div>
     </div>
   </div>
+</section>
 {% endblock %}
-
-
-<!doctype html>
-<html lang="en">
-  <head>
-    <!-- Required meta tags -->
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-
-    <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-    <link rel="stylesheet" href="{% static "css/main.css" %}">
-
-  </head>
-  <body>
-  </body>
-</html>

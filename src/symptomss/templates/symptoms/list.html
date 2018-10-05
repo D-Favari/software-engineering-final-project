@@ -1,0 +1,18 @@
+{% extends "base.html" %}
+{% block content %}
+
+<div class="container">
+  <div class="row no-gutters">
+    {% for obj in object_list %}
+    <div class="col-md-4">
+      {% include "symptoms/snippets/card.html" with instance=obj%}
+      {% if forloop.counter|divisibleby:2%}
+    </div>
+  </div>
+  <div class="row no-gutters">
+    {% else %}
+  </div>
+  {% endif %}
+  {% endfor %}
+</div>
+{% endblock content %}

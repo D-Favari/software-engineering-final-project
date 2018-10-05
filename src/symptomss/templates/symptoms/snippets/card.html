@@ -1,0 +1,14 @@
+<div class="card card-s">
+
+ {% if instance.image %}
+    <a href="{{instance.get_absolute_url}}" class="">
+      <img class="card-img-top" alt="{{instance.title}} logo">
+    </a>
+  {% endif %}
+
+  <div class="card-body">
+    <h5 class="card-title">{{instance.symptom}}</h5>
+    <a  class="btn btn-primary">Add <i class="fas fa-plus-circle fa-add"></i></a>
+  </div>
+
+</div>

@@ -20,14 +20,14 @@ from django.views.generic import TemplateView
 from django.conf import settings
 from django.conf.urls.static import static
 
-from symptoms.views import SymptomListView, symptom_list_view
+from symptomss.views import SymptomListView, symptom_list_view
 from .views import home, about, contact, exam
 
 urlpatterns = [
     url(r'^$', home, name='home'),
     url(r'^about/', about, name='about'),
     url(r'^contact/', contact, name='contact'),
-    url(r'^symptoms/', include(("symptoms.urls", "symptoms"), namespace="symptoms")),
+    url(r'^symptoms/', include(("symptomss.urls", "symptoms"), namespace="symptoms")),
     url(r'^search/', include(("search.urls", "search"), namespace="search")),
     url(r'^admin/', admin.site.urls),
     url(r'^exam/', exam, name='exam'),

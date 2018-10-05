@@ -5,7 +5,7 @@ User = get_user_model()
 
 class ContactForm(forms.Form):
     name 	= forms.CharField(
-	       widget=forms.TextInput(
+	           widget=forms.TextInput(
 	    		attrs={
 	    		"class":"form-control",
 	    		"placeholder":"Your name"
@@ -14,7 +14,7 @@ class ContactForm(forms.Form):
     	)
 
     email 	= forms.EmailField(
-	       widget=forms.EmailInput(
+	           widget=forms.EmailInput(
 	    		attrs={
 	    		"class":"form-control",
 	    		"placeholder":"Your email"
@@ -22,11 +22,11 @@ class ContactForm(forms.Form):
 	    		)
     	)
 
-    content 	= forms.CharField(
-               widget=forms.Textarea(
+    content = forms.CharField(
+                widget=forms.Textarea(
     				attrs={
     				"class":"form-control",
-    				"placeholder":"Type something"
+    				"placeholder":"How can we help you?"
     				}
     				)
     	)
@@ -34,5 +34,5 @@ class ContactForm(forms.Form):
     def clean_email(self):
         email = self.cleaned_data.get("email")
         if not "gmail.com" in email:
-            raise forms.ValidationError("Email has to be gmail")
+            raise forms.ValidationError("Email has to be a valid email.")
         return email
